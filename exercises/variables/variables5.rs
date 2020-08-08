@@ -1,11 +1,13 @@
 // variables5.rs
 // Make me compile! Execute the command `rustlings hint variables5` if you want a hint :)
 
-// I AM NOT DONE
-
 fn main() {
-    let number = "3"; // don't change this line
+    let mut number = "23-1900";
     println!("Number {}", number);
-    number = 3;
-    println!("Number {}", number);
+    {
+        // This block takes the outer var and 'redeclares' it
+        // in the scope of this block
+        let number = 1234;
+        println!("Number {}", number);
+    }
 }
